@@ -8,7 +8,7 @@ async function readWriteFile() {
     const filePath = resolve('source.txt');
     const contents = await readFile(filePath, { encoding: 'utf8' });
     const word = 'Node';
-    const newContents = contents.replaceAll(word, word.toUpperCase());
+    const newContents = contents.replaceAll(word, `${word.toUpperCase()}.JS`);
     
     await writeFile('copy.txt', newContents);
   } catch (err) {
