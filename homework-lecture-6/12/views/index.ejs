@@ -1,7 +1,7 @@
 <%- include('includes/start.ejs') %>
       <header class="app-header">
         <h1>Todo List</h1>
-        <h2>Notes:</h2><span><%= length  %> need to do, 0 done</span>
+        <span><%= length  %> need to do, 0 done</span>
         <hr>
       </header>
 
@@ -24,7 +24,8 @@
         <ul class="todo-list">
           <% tasks.forEach(task => { %>
            <li class="list-group-item" data-status="<%= task.status %>">
-            <h3><%= task.title %></h3>
+            <a href="tasks/<%= task.id %>">
+            <h3><%= task.title %></h3></a>
             <span class="todo-list-item"><span class="todo-list-item-label"><%= task.description %></span>
             <% if (!task.modifiedAt) { %>
               <% 
