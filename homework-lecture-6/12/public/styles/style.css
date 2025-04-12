@@ -24,6 +24,14 @@ body .todo-app .btn {
   background-color: #f2f3ff
 }
 
+.todo-app .btn.btn-danger {
+  border-color: #fb7f7f;
+}
+
+.todo-app .btn.btn-edit {
+  border-color: #ffce00;
+}
+
 body .todo-app .top-panel {
   display: flex
 }
@@ -59,19 +67,30 @@ header hr {
   padding: 0
 }
 
+.list-group-item[data-status] {
+  padding-left: 24px;
+  background-repeat: no-repeat;
+  background-position: 0 2px;
+  background-size: 20px 20px;
+}
+
+.list-group-item[data-status="done"] {
+  text-decoration: line-through;
+  background-image: url('/images/icons/check.svg');
+}
+
+.list-group-item[data-status="in-progress"] {
+  background-image: url('/images/icons/in-progress.svg');
+}
+
+.list-group-item[data-status="todo"] {
+  background-image: url('/images/icons/todo.svg');
+}
+
 .todo-list-item {
   display: flex;
   align-items: center;
   margin-left: 8px
-}
-
-.todo-list-item.done .todo-list-item-label {
-  text-decoration: line-through
-}
-
-.todo-list-item.important .todo-list-item-label {
-  color: orange;
-  font-weight: 700
 }
 
 .todo-list-item .todo-list-item-label {
@@ -84,12 +103,22 @@ header hr {
 
 .panel-add-item {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   flex-direction: column;
+  width: 100%;
+}
+
+.panel-add-item-block {
+  display: flex;
+  width: 100%;
+
+}
+.panel-add-item-block select {
+  width: 33%;
 }
 
 .panel-add-item .panel-add-item-input {
-  width: 95%;
+  flex: 100%;
   font: inherit;
   font-size: 14px;
 }
