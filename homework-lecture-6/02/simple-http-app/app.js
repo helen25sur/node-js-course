@@ -14,7 +14,7 @@ const server = http.createServer(async (req, res) => {
   req.pathname = parsedUrl.pathname;
   req.query = parsedUrl.query;
 
-  logger(req);
+  await logger(req);
 
   for (const route of routes) {
     const match = route.match(req.method, req.pathname);
