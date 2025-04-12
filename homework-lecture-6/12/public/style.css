@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
+
+body {
+  color: #575767;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px
+}
+
+body .todo-app {
+  margin: 0 auto;
+  max-width: 80%
+}
+
+body .todo-app .btn,
+body .todo-app .form-control {
+  border: 1px solid #ebebeb;
+  margin: 4px 8px;
+  padding: 8px 16px
+}
+
+body .todo-app .btn {
+  background-color: #f2f3ff
+}
+
+body .todo-app .top-panel {
+  display: flex
+}
+
+header h1,
+header h2 {
+  letter-spacing: 0;
+  line-height: auto
+}
+
+header h1 {
+  color: #000;
+  font-size: 56px;
+  font-weight: 800
+}
+
+header h2 {
+  font-size: 16px;
+  font-weight: 600
+}
+
+header hr {
+  border: 1px solid #ebebeb
+}
+
+.search-bar {
+  flex: 1 1
+}
+
+.todo-list {
+  list-style: none;
+  margin: 0 4px;
+  padding: 0
+}
+
+.todo-list-item {
+  display: flex;
+  align-items: center;
+  margin-left: 8px
+}
+
+.todo-list-item.done .todo-list-item-label {
+  text-decoration: line-through
+}
+
+.todo-list-item.important .todo-list-item-label {
+  color: orange;
+  font-weight: 700
+}
+
+.todo-list-item .todo-list-item-label {
+  margin-right: auto
+}
+
+.todo-list-item button {
+  margin-right: 5px
+}
+
+.panel-add-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.panel-add-item .panel-add-item-input {
+  width: 95%;
+  font: inherit;
+  font-size: 14px;
+}
+
+.panel-add-item button[type=submit] {
+  padding: 8px 40px
+}
+
+.svg-inline--fa {
+  width: 12px;
+  height: 12px;
+}
