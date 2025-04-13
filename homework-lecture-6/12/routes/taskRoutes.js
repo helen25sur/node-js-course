@@ -17,17 +17,17 @@ const router = express.Router();
 
 const pathFile = path.join(__dirname, '..', 'data', 'tasks.json');
 
-router.get('/tasks/:id', async (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
   const id = req.params.id;
   const tasks = await readFileJson(pathFile);
   const task = tasks.find(item => item.id === id);
   if (!task) {
-    return res.status(404).send('Task not found');
+    return res.status(404).render('404');
   }
   res.render('task', { 'task': task });
 });
 
-router.put('/tasks/:id', async (req, res, next) => {
+router.put('/:id', async (req, res, next) => {
   const errors = validateTask(req.body);
   const tasks = await readFileJson(pathFile);
 
@@ -57,7 +57,7 @@ router.put('/tasks/:id', async (req, res, next) => {
   res.redirect('/');
 });
 
-router.delete('/tasks/:id', async (req, res, next) => {
+router.delete('/:id', async (req, res, next) => {
   const id = req.params.id;
   const tasks = await readFileJson(pathFile);
   const newTasks = tasks.filter(item => item.id !== id);
@@ -66,7 +66,7 @@ router.delete('/tasks/:id', async (req, res, next) => {
   res.redirect('/');
 });
 
-router.post('/tasks', async (req, res, next) => {
+router.post('/', async (req, res, next) => {
   const errors = validateTask(req.body);
   const tasks = await readFileJson(pathFile);
 
@@ -92,7 +92,7 @@ router.post('/tasks', async (req, res, next) => {
   res.redirect('/');
 });
 
-router.get('/tasks', (req, res, next) => {
+router.get('/', (req, res, next) => {
   res.redirect('/');
 });
 

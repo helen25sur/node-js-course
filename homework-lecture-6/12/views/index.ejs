@@ -33,7 +33,7 @@
         <ul class="todo-list">
           <% tasks.forEach(task => { %>
            <li class="list-group-item" data-status="<%= task.status %>">
-            <a href="tasks/<%= task.id %>">
+            <a href="/tasks/<%= task.id %>">
             <h3><%= task.title %></h3></a>
             <span class="todo-list-item"><span class="todo-list-item-label"><%= task.description %></span>
             <% if (!task.modifiedAt) { %>
@@ -65,6 +65,7 @@
               </button></span>
             <input type="hidden" name="id" value="<%= task.id %>">
             </li>
+            <hr>
           <% }) %>
           
 

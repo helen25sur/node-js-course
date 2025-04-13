@@ -6,6 +6,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const tasksRouter = require('./routes/taskRoutes');
+const errorsRouter = require('./routes/errorsRoutes');
 const readFileJson = require('./utils/readFileJson');
 
 const app = express();
@@ -24,7 +25,7 @@ app.use(methodOverride(function (req, res) {
 
 const pathFile = path.join(__dirname, 'data', 'tasks.json');
 
-app.use(tasksRouter);
+app.use('/tasks', tasksRouter);
 
 app.use('/', async(req, res, next) => {
   try {
@@ -36,6 +37,8 @@ app.use('/', async(req, res, next) => {
     console.error(error);
   }
 });
+
+app.use(errorsRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
