@@ -1,23 +1,32 @@
 <%- include('includes/start.ejs') %>
       <header class="app-header">
         <h1>Todo List</h1>
-        <span><%= length  %> need to do, 0 done</span>
+        <span><%= tasks.length  %> need to do, 0 done</span>
         <hr>
       </header>
 
       <main>
+        <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+          <div class="alert alert-danger">
+            <ul>
+              <% errors.forEach(error => { %>
+                <li><%= error %></li>
+              <% }) %>
+            </ul>
+          </div>
+        <% } %>
         <form action="/tasks" method="POST" class="panel-add-item">
           <div class="panel-add-item-block">
             <input class="form-control panel-add-item-input"
-            type="text" placeholder="Write title of your task" aria-label="add task title" name="title" autocomplete="on" required>
+            type="text" placeholder="Write title of your task" aria-label="add task title" name="title" autocomplete="on" value="<%= typeof formData !== 'undefined' ? formData.title : '' %>">
             <select class="form-control" name="status">
-              <option value="todo">ToDo</option>
-              <option value="in-progress">In progress</option>
-              <option value="done">Done</option>
+              <option value="todo" <%= formData?.status === 'todo' ? 'selected' : '' %>>ToDo</option>
+              <option value="in-progress" <%= formData?.status === 'in-progress' ? 'selected' : '' %>>In progress</option>
+              <option value="done" <%= formData?.status === 'done' ? 'selected' : '' %>>Done</option>
             </select>
           </div>
           
-          <textarea class="form-control panel-add-item-input" name="description" id="" aria-label="add task description" rows="2" placeholder="Write description of your task" autocomplete="on" required></textarea>
+          <textarea class="form-control panel-add-item-input" name="description" id="" aria-label="add task description" rows="2" placeholder="Write description of your task" autocomplete="on"><%= typeof formData !== 'undefined' ? formData.description : '' %></textarea>
           <button type="submit"
             class="btn btn-warning ms-2">Add</button>
         </form>

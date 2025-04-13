@@ -140,3 +140,8 @@ header hr {
   width: 12px;
   height: 12px;
 }
+
+.alert-danger {
+  border: 1px solid #fb7f7f;
+  background: #ffeaea;
+}

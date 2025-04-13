@@ -22,7 +22,7 @@ function changeToEditableState(evt) {
       <div class="panel-add-item-block">
         <input class="form-control panel-add-item-input"
         type="text" placeholder="" aria-label="add task title" name="title"
-        autocomplete="on" value="${title}" required>
+        autocomplete="on" value="${title}">
 
         <select class="form-control" name="status">
           <option ${status === 'todo' ? 'selected' : ''} value="todo">ToDo</option>
@@ -33,7 +33,7 @@ function changeToEditableState(evt) {
 
       <textarea class="form-control panel-add-item-input"
       name="description" aria-label="add task description"
-      rows="2" required>${description}</textarea>
+      rows="2">${description}</textarea>
 
       <button type="submit" class="btn btn-warning ms-2">Edit</button>
     </form>

@@ -11,6 +11,7 @@ const {  v4: uuidv4 } = require('uuid');
 
 const writeFileJson = require('../utils/writeFileJson');
 const readFileJson = require('../utils/readFileJson');
+const validateTask = require('../utils/taskValidator');
 
 const router = express.Router();
 
@@ -27,9 +28,21 @@ router.get('/tasks/:id', async (req, res, next) => {
 });
 
 router.put('/tasks/:id', async (req, res, next) => {
+  const errors = validateTask(req.body);
+  const tasks = await readFileJson(pathFile);
+
+  if (errors.length > 0) {
+    const task = tasks.find(t => t.id === req.params.id);
+    return res.status(400).render('index', {
+      task: { ...task, ...req.body },
+      tasks: tasks,
+      errors,
+      formData: {}
+    });
+  }
   const id = req.params.id;
   console.log(id);
-  const tasks = await readFileJson(pathFile);
+
   const task = tasks.find(item => item.id === id);
   if (!task) {
     return res.status(404).send('Task not found');
@@ -54,7 +67,18 @@ router.delete('/tasks/:id', async (req, res, next) => {
 });
 
 router.post('/tasks', async (req, res, next) => {
+  const errors = validateTask(req.body);
   const tasks = await readFileJson(pathFile);
+
+  if (errors.length > 0) {
+    return res.status(400).render('index', {
+      tasks,
+      length: tasks.filter(t => t.status === 'todo').length,
+      errors,
+      formData: req.body
+    });
+  }
+  
   const taskObj = {
     id: uuidv4(),
     title: req.body.title,
