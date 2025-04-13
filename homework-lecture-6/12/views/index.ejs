@@ -1,7 +1,7 @@
 <%- include('includes/start.ejs') %>
       <header class="app-header">
         <h1>Todo List</h1>
-        <span><%= tasks.length  %> need to do, 0 done</span>
+        <span><%= length  %> need to do, <%= done  %> done</span>
         <hr>
       </header>
 
@@ -30,6 +30,21 @@
           <button type="submit"
             class="btn btn-warning ms-2">Add</button>
         </form>
+        <hr>
+        <div class="btn-group-filter" role="group">
+          <a href="/tasks" type="button" class="btn">
+            <img class="filter-icon" src="/images/icons/edit.svg" alt="All">
+            All</a>
+          <a href="/tasks?status=todo" type="button" class="btn">
+            <img class="filter-icon" src="/images/icons/todo.svg" alt="To Do">
+            To Do</a>
+          <a href="/tasks?status=in-progress" type="button" class="btn">
+            <img class="filter-icon" src="/images/icons/in-progress.svg" alt="To Do">
+            In Process</a>
+          <a href="/tasks?status=done" type="button" class="btn">
+            <img class="filter-icon" src="/images/icons/check.svg" alt="To Do">
+            Done</a>
+        </div>
         <ul class="todo-list">
           <% tasks.forEach(task => { %>
            <li class="list-group-item" data-status="<%= task.status %>">

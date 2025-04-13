@@ -57,8 +57,22 @@ hr {
   border: 1px solid #ebebeb
 }
 
-.search-bar {
-  flex: 1 1
+.btn-group-filter {
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px 0;
+}
+
+.btn-group-filter .btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filter-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
 }
 
 .todo-list {

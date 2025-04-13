@@ -22,7 +22,7 @@ router.get('/:id', async (req, res, next) => {
   const tasks = await readFileJson(pathFile);
   const task = tasks.find(item => item.id === id);
   if (!task) {
-    return res.status(404).render('404');
+    return res.status(404).render('404', {message: 'Task not found'});
   }
   res.render('task', { 'task': task });
 });
@@ -45,7 +45,7 @@ router.put('/:id', async (req, res, next) => {
 
   const task = tasks.find(item => item.id === id);
   if (!task) {
-    return res.status(404).send('Task not found');
+    return res.status(404).render('404', {message: 'Task not found'});
   }
 
   task.title = task.title !== req.body.title ? req.body.title : task.title;
@@ -73,7 +73,7 @@ router.post('/', async (req, res, next) => {
   if (errors.length > 0) {
     return res.status(400).render('index', {
       tasks,
-      length: tasks.filter(t => t.status === 'todo').length,
+      length: tasks.length,
       errors,
       formData: req.body
     });
@@ -92,8 +92,27 @@ router.post('/', async (req, res, next) => {
   res.redirect('/');
 });
 
-router.get('/', (req, res, next) => {
-  res.redirect('/');
+router.get('/', async (req, res, next) => {
+  console.log(req.query.status);
+  // const status = res.query.status;
+  if (req.query.status !== undefined) {
+    try {
+      const tasks = await readFileJson(pathFile);
+      const filterTasks = tasks.filter(t => t.status === req.query.status)
+      res.render('index', {
+        'tasks': filterTasks,
+        'length': tasks.length, 
+        done: tasks.filter(t => t.status === 'done').length,
+        errors: [],
+        formData: {}
+      });
+  
+    } catch (error) {
+      console.error(error);
+    }
+  } else {
+    res.redirect('/');
+  }
 });
 
 

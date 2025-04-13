@@ -30,8 +30,13 @@ app.use('/tasks', tasksRouter);
 app.use('/', async(req, res, next) => {
   try {
     const tasks = await readFileJson(pathFile);
-    res.render('index', {'tasks': tasks, 'length': tasks.length, errors: [],
-      formData: {}});
+    res.render('index', {
+      'tasks': tasks,
+      'length': tasks.length, 
+      done: tasks.filter(t => t.status === 'done').length,
+      errors: [],
+      formData: {}
+    });
 
   } catch (error) {
     console.error(error);
