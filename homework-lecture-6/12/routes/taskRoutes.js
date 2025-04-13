@@ -93,8 +93,6 @@ router.post('/', async (req, res, next) => {
 });
 
 router.get('/', async (req, res, next) => {
-  console.log(req.query.status);
-  // const status = res.query.status;
   if (req.query.status !== undefined) {
     try {
       const tasks = await readFileJson(pathFile);
