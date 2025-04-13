@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 200 80">
+  <rect x="0" y="0" width="200" height="80" rx="10" ry="10" fill="green" />
+  <text x="100" y="50" font-family="Arial, sans-serif" font-size="30" fill="white" text-anchor="middle" alignment-baseline="middle">
+    In Stock
+  </text>
+</svg>

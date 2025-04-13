@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', type='text/css', href='/styles.css')
+  body
+    main
+      .container
+        p #{products.length} 
+          span items in 
+          strong Smartphones 
+          span categories 
+        
+        ul.product-list
+          each item in products 
+            li.product-item
+              if item.availabilityStatus === "In Stock"
+                div(class="in-stock")
+                  img(src="/images/in-stock.svg", alt=item.availabilityStatus) 
+              else
+                div(class="out-stock")
+                  img(src="/images/out-stock.svg", alt=item.availabilityStatus)
+              img(src=item.images[0], alt=item.title) 
+              hr
+              h3=item.title
+              h4=item.price 
+              p Rating: #{item.rating}
