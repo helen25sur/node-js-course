@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const tasksRouter = require('./routes/taskRoutes');
 const errorsRouter = require('./routes/errorsRoutes');
 const readFileJson = require('./utils/readFileJson');
+const logger = require('./utils/logger');
 
 const app = express();
 const port = 3000;
@@ -22,6 +23,8 @@ app.use(methodOverride(function (req, res) {
     return req.body._method;
   }
 }));
+
+app.use(logger);
 
 const pathFile = path.join(__dirname, 'data', 'tasks.json');
 
