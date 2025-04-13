@@ -1,0 +1,21 @@
+{
+  "name": "table-pug",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Olena Surilova",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pug": "^3.0.3",
+    "table-pug": "file:"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

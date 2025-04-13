@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', type='text/css', href='/styles.css')
+  body
+    main
+      .container
+        h1 All Customers
+        table.users-table
+          thead 
+            tr 
+              th User Name
+              th Company
+              th Age
+              th Phone Number
+              th Email
+              th Country
+              th Status
+          tbody 
+          each user in users
+            tr 
+              td #{user.name.first} #{user.name.last}
+              td #{user.job.company}
+              td #{user.age}
+              td.phone #{user.phoneVariation}
+              td #{user.emails}
+              td #{user.location.country}
+              td(class=user.status) 
+                span #{user.status}
+          
+        div.pagination
+          p.note Showing data #{(currentPage - 1) * 10 + 1} to #{(currentPage - 1) * 10 + users.length} of #{commonLength} entries
+          ul.pagination-list
+            if currentPage > 1
+              li
+                a(href=`/?page=${currentPage - 1}`) Prev
+            each val in [...Array(totalPages).keys()]
+              - const pageNum = val + 1
+              li(class=pageNum === currentPage ? 'active' : '')
+                a(href=`/?page=${pageNum}`) #{pageNum}
+            if currentPage < totalPages
+              li
+                a(href=`/?page=${currentPage + 1}`) Next
+          
