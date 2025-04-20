@@ -5,105 +5,105 @@
       "name": "Анна",
       "review": "Дуже зручно та швидко. Рекомендую всім!",
       "rating": 5,
-      "photo": "https://randomuser.me/api/portraits/women/1.jpg"
+      "photo": "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg"
     },
     {
       "id": 2,
       "name": "Олег",
       "review": "Сервіс непоганий, але інтерфейс трохи заплутаний.",
       "rating": 3,
-      "photo": "https://randomuser.me/api/portraits/men/2.jpg"
+      "photo": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
     },
     {
       "id": 3,
       "name": "Марина",
       "review": "Все працює стабільно. Користуюсь щодня!",
       "rating": 5,
-      "photo": "https://randomuser.me/api/portraits/women/3.jpg"
+      "photo": "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg"
     },
     {
       "id": 4,
       "name": "Іван",
       "review": "Іноді бувають помилки, але загалом добре.",
       "rating": 4,
-      "photo": "https://randomuser.me/api/portraits/men/4.jpg"
+      "photo": "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg"
     },
     {
       "id": 5,
       "name": "Світлана",
       "review": "Мені дуже сподобалось! Все інтуїтивно зрозуміло.",
       "rating": 5,
-      "photo": "https://randomuser.me/api/portraits/women/5.jpg"
+      "photo": "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg"
     },
     {
       "id": 6,
       "name": "Тарас",
       "review": "Очікував трохи більше, але загалом норм.",
       "rating": 3,
-      "photo": "https://randomuser.me/api/portraits/men/6.jpg"
+      "photo": "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg"
     },
     {
       "id": 7,
       "name": "Оксана",
       "review": "Враження чудові! Швидко, зручно, якісно.",
       "rating": 5,
-      "photo": "https://randomuser.me/api/portraits/women/7.jpg"
+      "photo": "https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg"
     },
     {
       "id": 8,
       "name": "Денис",
       "review": "Є кілька моментів, які можна покращити.",
       "rating": 4,
-      "photo": "https://randomuser.me/api/portraits/men/8.jpg"
+      "photo": "https://images.pexels.com/photos/211050/pexels-photo-211050.jpeg"
     },
     {
       "id": 9,
       "name": "Катерина",
       "review": "Мені не вистачає деяких функцій.",
       "rating": 2,
-      "photo": "https://randomuser.me/api/portraits/women/9.jpg"
+      "photo": "https://images.pexels.com/photos/1006265/pexels-photo-1006265.jpeg"
     },
     {
       "id": 10,
       "name": "Максим",
       "review": "Просто супер! Ви найкращі ❤️",
       "rating": 5,
-      "photo": "https://randomuser.me/api/portraits/men/10.jpg"
+      "photo": "https://images.pexels.com/photos/769746/pexels-photo-769746.jpeg"
     },
     {
       "id": 11,
       "name": "Юлія",
       "review": "Не завжди відкривається сторінка, але загалом ок.",
       "rating": 3,
-      "photo": "https://randomuser.me/api/portraits/women/11.jpg"
+      "photo": "https://images.pexels.com/photos/3060659/pexels-photo-3060659.jpeg"
     },
     {
       "id": 12,
       "name": "Артем",
       "review": "Дякую за якісний продукт. Все працює чудово!",
       "rating": 5,
-      "photo": "https://randomuser.me/api/portraits/men/12.jpg"
+      "photo": "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg"
     },
     {
       "id": 13,
       "name": "Леся",
       "review": "Маю декілька зауважень щодо дизайну.",
       "rating": 4,
-      "photo": "https://randomuser.me/api/portraits/women/13.jpg"
+      "photo": "https://images.pexels.com/photos/720598/pexels-photo-720598.jpeg"
     },
     {
       "id": 14,
       "name": "Роман",
       "review": "Дуже зручно користуватись. Все логічно.",
       "rating": 5,
-      "photo": "https://randomuser.me/api/portraits/men/14.jpg"
+      "photo": "https://images.pexels.com/photos/840916/pexels-photo-840916.jpeg"
     },
     {
       "id": 15,
       "name": "Ірина",
       "review": "Задоволена результатом, дякую!",
       "rating": 5,
-      "photo": "https://randomuser.me/api/portraits/women/15.jpg"
+      "photo": "https://images.pexels.com/photos/975657/pexels-photo-975657.jpeg"
     }
   ]
 }
