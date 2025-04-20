@@ -1,0 +1,109 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Анна",
+      "review": "Дуже зручно та швидко. Рекомендую всім!",
+      "rating": 5,
+      "photo": "https://randomuser.me/api/portraits/women/1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Олег",
+      "review": "Сервіс непоганий, але інтерфейс трохи заплутаний.",
+      "rating": 3,
+      "photo": "https://randomuser.me/api/portraits/men/2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Марина",
+      "review": "Все працює стабільно. Користуюсь щодня!",
+      "rating": 5,
+      "photo": "https://randomuser.me/api/portraits/women/3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Іван",
+      "review": "Іноді бувають помилки, але загалом добре.",
+      "rating": 4,
+      "photo": "https://randomuser.me/api/portraits/men/4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Світлана",
+      "review": "Мені дуже сподобалось! Все інтуїтивно зрозуміло.",
+      "rating": 5,
+      "photo": "https://randomuser.me/api/portraits/women/5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Тарас",
+      "review": "Очікував трохи більше, але загалом норм.",
+      "rating": 3,
+      "photo": "https://randomuser.me/api/portraits/men/6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Оксана",
+      "review": "Враження чудові! Швидко, зручно, якісно.",
+      "rating": 5,
+      "photo": "https://randomuser.me/api/portraits/women/7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Денис",
+      "review": "Є кілька моментів, які можна покращити.",
+      "rating": 4,
+      "photo": "https://randomuser.me/api/portraits/men/8.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Катерина",
+      "review": "Мені не вистачає деяких функцій.",
+      "rating": 2,
+      "photo": "https://randomuser.me/api/portraits/women/9.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Максим",
+      "review": "Просто супер! Ви найкращі ❤️",
+      "rating": 5,
+      "photo": "https://randomuser.me/api/portraits/men/10.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Юлія",
+      "review": "Не завжди відкривається сторінка, але загалом ок.",
+      "rating": 3,
+      "photo": "https://randomuser.me/api/portraits/women/11.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Артем",
+      "review": "Дякую за якісний продукт. Все працює чудово!",
+      "rating": 5,
+      "photo": "https://randomuser.me/api/portraits/men/12.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Леся",
+      "review": "Маю декілька зауважень щодо дизайну.",
+      "rating": 4,
+      "photo": "https://randomuser.me/api/portraits/women/13.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Роман",
+      "review": "Дуже зручно користуватись. Все логічно.",
+      "rating": 5,
+      "photo": "https://randomuser.me/api/portraits/men/14.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Ірина",
+      "review": "Задоволена результатом, дякую!",
+      "rating": 5,
+      "photo": "https://randomuser.me/api/portraits/women/15.jpg"
+    }
+  ]
+}
