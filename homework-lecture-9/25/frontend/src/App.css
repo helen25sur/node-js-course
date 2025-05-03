@@ -1,0 +1,78 @@
+.grid {
+  display: grid;
+  grid-template-columns: 306px 1fr;
+  grid-template-rows: 268px 1fr;
+  gap: 40px 71px;
+}
+
+.grid aside {
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.grid header {
+  grid-column-end: 3;
+  grid-row-end: 2;
+}
+
+.grid main {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+.container {
+  max-width: 1068px;
+  margin: 20px auto;
+  padding: 30px 38px;
+  border-radius: 30px;
+  background-color: #FFFFFF;
+  box-shadow: 2px 4px 8px rgba(41, 45, 50, 0.3);
+}
+
+
+p.note {
+  color: #B5B7C0;
+  font-weight: 500;
+}
+
+.pagination {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination-list li {
+  padding: 6px 9px;
+  margin-left: 12px;
+  background-color: #F5F5F5;
+  border: 1px solid #EEEEEE;
+  border-radius: 4px;
+}
+
+.pagination-list li.active {
+  background-color: #5932EA;
+  border-color: #5932EA;  
+}
+
+.pagination-list a {
+  font: inherit;
+  color: #404B52;
+  text-decoration: none;
+}
+
+.pagination-list a:hover {
+  text-decoration: underline;
+}
+
+.pagination-list li.active a {
+  color: #FFFFFF;
+}

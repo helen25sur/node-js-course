@@ -1,0 +1,54 @@
+header {
+  padding-top: 41px;
+  padding-right: 95px;
+}
+
+.header-title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 26px;
+}
+
+.header-block {
+  padding: 32px 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.header-block_item {
+  display: flex;
+  align-items: center;
+  padding: 0 56px;
+  gap: 0 20px;
+}
+
+.header-block_item:not(:last-of-type) {
+  border-right: 1px solid #F0F0F0;  
+}
+
+.header-block_icon {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 100%;
+  background: linear-gradient(125deg, #D3FFE7, #effff6);
+}
+
+.header-block_text h4 {
+  color: #ACACAC;
+  font-weight: 400;
+  letter-spacing: -1%;
+  margin: 0;
+}
+
+.header-block_text span {
+  color: #333333;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -1%;
+}

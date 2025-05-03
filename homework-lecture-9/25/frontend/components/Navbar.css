@@ -1,0 +1,54 @@
+aside {
+  background-color: #fff;
+  padding: 36px 28px;
+  width: 306px;
+  height: 100vh;
+  position: fixed;
+}
+
+.navbar-title {
+  margin: 0;
+  margin-bottom: 128px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  color: #9197B3;
+  font-size: 14px;
+}
+
+.navbar-menu li {
+  width: 100%;
+}
+
+.navbar-menu li a {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.navbar-menu li a.active {
+  background-color: #5932EA;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.navbar-menu li a .bx {
+  font-size: 20px;
+}
+
+.arrow-icon {
+  margin-left: auto;
+}
