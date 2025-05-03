@@ -35,7 +35,12 @@ router.get('/rooms', cors(corsOptions), async (req, res) => {
 
 router.get('/bookings', cors(corsOptions), async (req, res) => {
   try {
-    const [rows] = await pool.query('SELECT * FROM bookings');
+    const query = `
+      SELECT bookings.*, guests.first_name, guests.last_name, rooms.type AS room_type, rooms.room_number FROM bookings
+      INNER JOIN guests ON bookings.guest_id = guests.id
+      INNER JOIN rooms ON bookings.room_id = rooms.id
+    `
+    const [rows] = await pool.query(query);
     res.json(rows);
     return;
   } catch (err) {

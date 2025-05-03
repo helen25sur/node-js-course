@@ -34,7 +34,6 @@ const Navbar = () => {
             Booking
             <span className='arrow-icon'><i class='bx bx-chevron-right'></i></span>
           </NavLink>
-          {/* <box-icon name='list-ul' color="#9197B3"></box-icon> */}
         </li>
       </menu>
     </aside>
