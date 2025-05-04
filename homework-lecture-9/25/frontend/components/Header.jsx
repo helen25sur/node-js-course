@@ -1,8 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './Header.css';
 
 const Header = () => {
+  const [counts, setCounts] = useState({
+    guests: 0,
+    rooms: 0,
+    bookings: 0
+  });
+
+  useEffect(() => {
+    const fetchCounts = async () => {
+      try {
+        const [guestsRes, roomsRes, bookingsRes] = await Promise.all([
+          fetch('http://localhost:3000/guests'),
+          fetch('http://localhost:3000/rooms'),
+          fetch('http://localhost:3000/bookings'),
+        ]);
+
+        const [guests, rooms, bookings] = await Promise.all([
+          guestsRes.json(),
+          roomsRes.json(),
+          bookingsRes.json(),
+        ]);
+
+        setCounts({
+          guests: guests.length,
+          rooms: rooms.length,
+          bookings: bookings.length
+        });
+      } catch (err) {
+        console.error('Error fetching counts:', err);
+      }
+    };
+
+    fetchCounts();
+  }, []);
+
   return (
     <header>
       <h3 className='header-title'>
@@ -16,7 +50,7 @@ const Header = () => {
           </span>
           <div className="header-block_text">
             <h4>Total Guests</h4>
-            <span>40</span>
+            <span>{counts.guests}</span>
           </div>
         </div>
         <div className="header-block_item">
@@ -25,7 +59,7 @@ const Header = () => {
           </span>
           <div className="header-block_text">
             <h4>Total Rooms</h4>
-            <span>30</span>
+            <span>{counts.rooms}</span>
           </div>
         </div>
         <div className="header-block_item">
@@ -34,7 +68,7 @@ const Header = () => {
           </span>
           <div className="header-block_text">
             <h4>Total Booking</h4>
-            <span>38</span>
+            <span>{counts.bookings}</span>
           </div>
         </div>
       </div>

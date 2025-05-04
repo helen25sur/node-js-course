@@ -14,25 +14,53 @@ const Navbar = () => {
 
       <menu className='navbar-menu'>
         <li>
-          <NavLink to="/guests" activeClassName="active">
-            <i class='bx bx-user-circle'></i>
+          <NavLink to="/guests" className={({ isActive }) => isActive ? 'active' : ''}>
+            <i className='bx bx-user-circle'></i>
             Guests
-            <span className='arrow-icon'><i class='bx bx-chevron-right'></i></span>
+            <span className='arrow-icon'><i className='bx bx-chevron-right'></i></span>
           </NavLink>
         </li>
         <li>
-          <NavLink to="/rooms" activeClassName="active-link">
-            <i class='bx bx-home-alt-2'></i>
+          <NavLink to="/rooms" className={({ isActive }) => isActive ? 'active' : ''}>
+            <i className='bx bx-home-alt-2'></i>
             Rooms
-            <span className='arrow-icon'><i class='bx bx-chevron-right'></i></span>
+            <span className='arrow-icon'><i className='bx bx-chevron-right'></i></span>
           </NavLink>
           
         </li>
         <li>
-          <NavLink to="/booking" activeClassName="active-link">
-            <i class='bx bx-list-ul'></i>
+          <NavLink to="/booking" className={({ isActive }) => isActive ? 'active' : ''}>
+            <i className='bx bx-list-ul'></i>
             Booking
-            <span className='arrow-icon'><i class='bx bx-chevron-right'></i></span>
+            <span className='arrow-icon'><i className='bx bx-chevron-right'></i></span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/add-guest" className={({ isActive }) => isActive ? 'active' : ''}>
+            <i className='bx bx-user-plus'></i>
+            Add New Guest
+            <span className='arrow-icon'><i className='bx bx-chevron-right'></i></span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/available-rooms" className={({ isActive }) => isActive ? 'active' : ''}>
+            <i className='bx bxs-hotel'></i>
+            Available Rooms
+            <span className='arrow-icon'><i className='bx bx-chevron-right'></i></span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/add-booking" className={({ isActive }) => isActive ? 'active' : ''}>
+            <i className='bx bx-hotel'></i>
+            Add New Booking
+            <span className='arrow-icon'><i className='bx bx-chevron-right'></i></span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/monthly-income" className={({ isActive }) => isActive ? 'active' : ''}>
+            <i className='bx bx-money'></i>
+            Count Monthly Income
+            <span className='arrow-icon'><i className='bx bx-chevron-right'></i></span>
           </NavLink>
         </li>
       </menu>
