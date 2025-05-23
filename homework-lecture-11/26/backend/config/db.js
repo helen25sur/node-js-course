@@ -7,30 +7,35 @@ const dbName = process.env.MONGO_DB_NAME;
 if (!url || !dbName) {
   throw new Error('MONGO_URI and MONGO_DB_NAME must be defined in .env');
 }
-const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
-let dbInstance = null;
+const client = new MongoClient(url);
+let database = null;
 
 const connectToDB = async () => {
-  if (dbInstance) return dbInstance;
+  if (database) return database;
   try {
-    await client.connect();
-    console.log('Connected to MongoDB');
-    dbInstance = client.db(dbName);
-    return dbInstance;
+    const client = await MongoClient.connect(url);
+    database = client.db(dbName);
   } catch (error) {
     console.error('Error connecting to MongoDB:', error);
     throw error;
   }
 };
 
+async function getDB() {
+  if (!database) {
+    throw new Error('Database not connected. Please call connectToDB first.');
+  }
+  return database;
+} 
+
 const closeDBConnection = async () => {
   try {
     await client.close();
     console.log('MongoDB connection closed');
-    dbInstance = null;
+    database = null;
   } catch (error) {
     console.error('Error closing MongoDB connection:', error);
   }
 };
 
-module.exports = { connectToDB, closeDBConnection };
+module.exports = { connectToDB, getDB, closeDBConnection };
