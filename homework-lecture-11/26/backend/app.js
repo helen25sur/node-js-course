@@ -17,8 +17,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true })); // Parse incoming request bodies
 app.use(express.static('public'));
 
-// app.use(categoryRoutes);
-// app.use(orderRoutes);
+app.use(categoryRoutes);
+app.use(orderRoutes);
 app.use(productRoutes);
 
 app.use(function (error, req, res, next) {

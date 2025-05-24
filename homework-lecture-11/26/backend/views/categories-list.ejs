@@ -1,0 +1,12 @@
+<%- include('./includes/head', {title: title}) %>
+
+<div class="btn-group d-flex justify-content-center pt-5" role="group">
+
+  <% categories.forEach((category) => { %>
+    <a href="/categories/<%= category.name %>" class="btn btn-outline-primary btn-lg py-5">
+      <%= category.name %>
+    </a>
+  <% }) %>
+</div>
+
+<%- include('./includes/footer') %>
