@@ -25,6 +25,13 @@
           </a>
         </li>
         <li class="nav-item">
+          <a class="nav-link <%= title === 'Top 3 Products' ? 'active' : '' %>" href="/products/top-3">Top 3 Products
+            <% if (title === 'Top 3 Products') { %>
+              <span class="visually-hidden">(current)</span>
+            <% } %>
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link <%= title === 'Categories List' ? 'active' : '' %>" href="/categories">Categories
              <% if (title === 'Categories List') { %>
               <span class="visually-hidden">(current)</span>

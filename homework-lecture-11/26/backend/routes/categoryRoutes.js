@@ -21,6 +21,7 @@ router.get('/categories', async function (req, res) {
   }
 });
 
+// Знайти всі продукти в категорії “Smartphones”.
 router.get('/categories/:nameCategory', async function (req, res) {
   const nameCategory = req.params.nameCategory;
   try {
