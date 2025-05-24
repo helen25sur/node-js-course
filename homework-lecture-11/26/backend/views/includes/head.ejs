@@ -18,22 +18,22 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="/products">Products List
+          <a class="nav-link <%= title === 'Products List' ? 'active' : '' %>" href="/products">Products
             <% if (title === 'Products List') { %>
               <span class="visually-hidden">(current)</span>
             <% } %>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/categories">Categories
-             <% if (title === 'Categories') { %>
+          <a class="nav-link <%= title === 'Categories List' ? 'active' : '' %>" href="/categories">Categories
+             <% if (title === 'Categories List') { %>
               <span class="visually-hidden">(current)</span>
             <% } %>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/orders">Orders
-              <% if (title === 'Orders') { %>
+          <a class="nav-link <%= title === 'Orders List' ? 'active' : '' %>" href="/orders">Orders
+              <% if (title === 'Orders List') { %>
                 <span class="visually-hidden">(current)</span>
               <% } %>
           </a>
