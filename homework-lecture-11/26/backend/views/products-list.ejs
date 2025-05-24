@@ -2,15 +2,15 @@
 
 <div class="container">
   <h2><%= title %></h2>
-  <div class="d-flex flex-row justify-content-between">
+  <div class="d-flex flex-wrap flex-row justify-content-center">
       <% products.forEach((product, idx) => { %>
-        <div class="card border-primary m-2 col-4">
+        <div class="card border-primary m-2 col-3">
           <div class="card-header">
             <h3><%= product.name %></h3>
           </div>
           <div class="card-body">
             <p>Price: $<%= product.price %></p>
-            <p>Category: <%= categories[idx].name %></p>
+            <p>Category: <%= categories.find(category => String(category._id) === String(product.categoryId)).name %></p>
             <p>Stock: <%= product.stock %></p>
           </div>
           

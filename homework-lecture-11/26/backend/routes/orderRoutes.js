@@ -18,7 +18,6 @@ router.get('/orders', async function (req, res) {
       .collection('products')
       .find()
       .toArray();
-    console.log(products)
     res.render('orders-list', { orders, products, title: 'Orders List' });
   } catch (error) {
     console.error('Error fetching orders:', error);
