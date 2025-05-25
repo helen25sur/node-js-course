@@ -1,30 +1,9 @@
 const express = require('express');
 const mongodb = require('mongodb');
-const db = require('../data/db');
+const { getOrders } = require('../controllers/order');
 
 const router = express.Router();
 
-const ObjectId = mongodb.ObjectId;
-
-router.get('/orders', async function (req, res) {
-  try {
-    const database = await db.getDB();
-    const orders = await database
-      .collection('orders')
-      .find()
-      .toArray();
-    console.log(orders[0].items);
-    // Порахувати загальний прибуток із усіх замовлень.
-    const totalProfit = orders.reduce((sum, order) => sum + order.total, 0);
-    const products = await database
-      .collection('products')
-      .find()
-      .toArray();
-    res.render('orders-list', { orders, products, totalProfit, title: 'Orders List' });
-  } catch (error) {
-    console.error('Error fetching orders:', error);
-    res.status(500).send({ message: 'Internal Server Error' });
-  }
-});
+router.get('/orders', getOrders);
 
 module.exports = router;
