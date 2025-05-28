@@ -6,8 +6,6 @@ const categoryRoutes = require('./routes/categoryRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const productRoutes = require('./routes/productRoutes');
 
-const db = require('./data/db');
-
 const app = express();
 
 // Activate EJS view engine
@@ -29,7 +27,6 @@ app.use(function (error, req, res, next) {
   res.status(500).send({message: error.message});
 });
 
-db.connectToDB().then(function () {
-  console.log('Connected to database');
-  app.listen(3001);
-});
+
+
+module.exports = app; // Export the app for testing purposes
