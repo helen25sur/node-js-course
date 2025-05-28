@@ -9,6 +9,9 @@ This project is a RESTful API built with Node.js and Express. It allows product 
 - Express.js
 - MongoDB + Mongoose
 - Docker (optional)
+- jest
+- supertest
+- cypress
 
 ## Getting Started
 
@@ -45,7 +48,18 @@ npm run dev
 
 ├── views/
 
-└── app.js
+├── app.js
+
+└── server.js
+
+## Running Tests
+```bash
+npm run test
+```
+### E2E Tests
+```bash
+npm run cypress:open
+```
 
 ## 📄 License
 This project is licensed under the MIT License.
