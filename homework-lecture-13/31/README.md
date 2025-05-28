@@ -14,8 +14,8 @@ This project is a RESTful API built with Node.js and Express. It allows product 
 
 1. Клонуй репозиторій:
 ```bash
-git clone https://github.com/yourname/project-name.git
-cd project-name
+git clone https://github.com/helen25sur/node-js-course.git
+cd ./node-js-course/homework-lecture-13/31
 ```
 
 2. Встанови залежності:
